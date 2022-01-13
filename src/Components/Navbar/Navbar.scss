@@ -1,0 +1,92 @@
+.navbars {
+    
+    width: 100%;
+    border-bottom: 2px solid #38D0A2;
+    padding: .8rem;
+
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 500px;
+            margin-right: 2rem;
+
+            &-items {
+                display: flex;
+                align-items: center;
+
+                &__icon {
+                    font-size: 1.4rem;
+                    width: 32px;
+                    height: 32px;
+                    background-color: #38D0A2;
+                    text-align: center;
+                    border-radius: .3rem;
+                    color: #fff;
+                }
+
+                &__text {
+                    margin-right: .6rem;
+                    color: #252525;
+                    font-weight: 500;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &__icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width : 998px) {
+
+
+            &__link {
+                position: absolute;
+                content: '';
+                flex-direction: column;
+                top: 10.5%;
+                background-color: #38D0A2;
+                width: 100%;
+                z-index: 1;
+                right: 0;
+                margin-right: 0;
+                color: #fff;
+                opacity: 0;
+                transition: all .4s ease-in-out;
+
+                &-items {
+
+                    margin: 1.5rem 0;
+
+                    &__text {
+                        color: #fff;
+                    }
+                }
+
+                &.active-navbar {
+                    opacity: 1;
+                    transition: all .4s ease-in-out;
+
+                }
+            }
+
+            &__icon {
+                display: block;
+            }
+        }
+    }
+
+
+}
